@@ -1,0 +1,75 @@
+.traffic-light-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 50px;
+}
+
+.traffic-light-stick {
+  width: 20px;
+  height: 40px;
+  background: #34495e;
+  margin-bottom: 0px;
+}
+
+.traffic-light-face {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 150px;
+  background: #2c3e50;
+  border-radius: 20px;
+  padding: 20px;
+}
+
+.light {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin: 10px 0;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  box-shadow: 
+    0 0 15px rgba(0, 0, 0, 0.2),
+    inset 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.light::after {
+  content: '';
+  position: absolute;
+  top: -10%;
+  left: -10%;
+  width: 120%;
+  height: 120%;
+  background: inherit;
+  border-radius: 50%;
+  opacity: 0;
+  filter: blur(20px);
+  transition: inherit;
+}
+
+.light:hover {
+  transform: scale(1.05);
+}
+
+.light.active {
+  transform: scale(1.1);
+  box-shadow: 0 0 30px 15px rgba(255, 255, 255, 0.3);
+}
+
+.light.active::after {
+  opacity: 0.6;
+}
+
+.red {
+  background: #e74c3c;
+}
+
+.yellow {
+  background: #f1c40f;
+}
+
+.green {
+  background: #2ecc71;
+}
