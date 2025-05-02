@@ -1,18 +1,15 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
 
-//Bootstrap
-import "bootstrap/dist/css/bootstrap.min.css";
-import "bootstrap"
 
-// index.css'
+// Global styles (for background)
 import '../styles/index.css'
 
-// components
-import Home from './components/Home';
+// App component
+import App from './components/App'; // Import App instead of Home
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <Home/>
+    <App /> {/* Render the App component */}
   </React.StrictMode>,
 )

@@ -1,5 +1,5 @@
 import React from 'react';
-import TrafficLight from "./TrafficLight";
+import TrafficLight from "./TrafficLight"; // Correct import path
 
 const App = () => {
   return (
